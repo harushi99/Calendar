@@ -59,7 +59,7 @@ export default function WeeklyCalendar() {
             <br />
             <WeeklyCalendarRenderer showDetailsHandle={showDetailsHandle} />
             <br />
-            {showDetails.current && events ? <WeeklyEvents events={events} /> : "There are no events for the selected dates"}
+            {showDetails.current && events ? <WeeklyEvents events={events} /> : <h4 className='text-center'> There are no events for the selected dates</h4>}
         </div>
     );
 }
