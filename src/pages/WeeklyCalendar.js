@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import "./WeeklyCalendar.css";
 import { useState } from "react";
 import WeeklyCalendarRenderer from "../helpers/WeeklyCalendarRenderer";
 import WeeklyEvents from "../components/WeeklyEvents";
 import { format, endOfWeek} from 'date-fns';
-
+import "./WeeklyCalendar.css";
 
 export default function WeeklyCalendar() {
+
     const [date, setDate] = useState(new Date());
     const [endDate, setEndDate] = useState(endOfWeek(new Date(), { weekStartsOn: 1 }));
     const [events, setEvents] = useState();

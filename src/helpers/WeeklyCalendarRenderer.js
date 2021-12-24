@@ -63,6 +63,7 @@ const WeeklyCalendarRenderer = ({ showDetailsHandle }) => {
             </div>
         );
     };
+
     const renderDays = () => {
         const dateFormat = "EEE";
         const days = [];
@@ -76,6 +77,7 @@ const WeeklyCalendarRenderer = ({ showDetailsHandle }) => {
         }
         return <div className="days rowGrid">{days}</div>;
     };
+
     const renderCells = () => {
         const startDate = startOfWeek(currentMonth, { weekStartsOn: 1 });
         const endDate = lastDayOfWeek(currentMonth, { weekStartsOn: 1 });
@@ -98,7 +100,6 @@ const WeeklyCalendarRenderer = ({ showDetailsHandle }) => {
                             }`}
                         key={day}
                         onClick={() => {
-                            //const dayStr = format(cloneDay, "yyyy-MM-dd");
                             onDateClickHandle(cloneDay, endDate);
                         }}
                     >
@@ -118,6 +119,7 @@ const WeeklyCalendarRenderer = ({ showDetailsHandle }) => {
         }
         return <div className="body">{rows}</div>;
     };
+
     const renderFooter = () => {
         return (
             <div className="header rowGrid flex-middle">

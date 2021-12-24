@@ -1,7 +1,10 @@
-import { Accordion, Button } from 'react-bootstrap';
+import { Accordion } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import EventDetails from './EventDetails';
+
+
 const WeeklyEvents = (props) => {
+
     const [coachs, setCoachs] = useState([]);
     const [establishments, setEstablishments] = useState([]);
     const [activities, setActivities] = useState([]);

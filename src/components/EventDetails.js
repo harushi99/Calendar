@@ -1,8 +1,9 @@
 import React from 'react'
 import { Image} from 'react-bootstrap';
 import defaultImage from '../assets/img/index.png'
-const EventDetails = ({details, coachs, establishments,activities})=> {
 
+
+const EventDetails = ({details, coachs, establishments,activities})=> {
 
     const searchArray =(arrayToSearch, id, keyPropName, defaultElement)=>{
         
