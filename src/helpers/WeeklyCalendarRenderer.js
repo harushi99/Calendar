@@ -93,10 +93,10 @@ const WeeklyCalendarRenderer = ({ showDetailsHandle }) => {
                 days.push(
                     <div
                         className={`colGrid cell ${isSameDay(day, new Date())
-                                ? "today"
-                                : isSameDay(day, selectedDate)
-                                    ? "selected"
-                                    : ""
+                            ? "today"
+                            : isSameDay(day, selectedDate)
+                                ? "selected"
+                                : ""
                             }`}
                         key={day}
                         onClick={() => {
@@ -126,11 +126,13 @@ const WeeklyCalendarRenderer = ({ showDetailsHandle }) => {
                 <div className="colGrid col-start">
                     <div className="icon" onClick={() => changeWeekHandle("prev")}>
                         prev week
-          </div>
+                    </div>
                 </div>
                 <div>{currentWeek}</div>
-                <div className="colGrid col-end" onClick={() => changeWeekHandle("next")}>
-                    <div className="icon">next week</div>
+                <div className="colGrid col-end" >
+                    <div className="icon" onClick={() => changeWeekHandle("next")}>
+                        next week
+                    </div>
                 </div>
             </div>
         );
