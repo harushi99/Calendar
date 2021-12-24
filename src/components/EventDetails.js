@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image } from 'react-bootstrap';
 import defaultImage from '../assets/img/index.png'
-
+import { BsAlarm, BsFillPinMapFill, BsBarChartSteps } from "react-icons/bs";
 
 const EventDetails = ({ details, coachs, establishments, activities }) => {
 
@@ -39,13 +39,14 @@ const EventDetails = ({ details, coachs, establishments, activities }) => {
             <div className="card-header border-0">
                 <Image className="photo" src={findCoach(details.rest.coach)} alt="" roundedCircle />
             </div>
-            <div className="card-block px-2">
+            <div className="card-block px-3">
                 <h4 className="card-title">{findActivity(details.rest.meta_activity)}</h4>
-                <p className="card-text">{details.hour}</p>
+                <p className="card-text"><BsAlarm/> Hour : {details.hour}</p>
+                <p className="card-text"><BsBarChartSteps/> Level : {details.rest.level}</p>
             </div>
             <div className="w-100"></div>
             <div className="card-footer w-100 text-muted">
-                {findEstablishment(details.rest.establishment)}
+                <BsFillPinMapFill/> {findEstablishment(details.rest.establishment)}
             </div>
         </div>
     )
