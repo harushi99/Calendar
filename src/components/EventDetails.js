@@ -35,7 +35,7 @@ const EventDetails = ({ details, coachs, establishments, activities }) => {
     };
 
     return (
-        <div className="card flex-row flex-wrap mt-3" key={details.rest.id}>
+        <div className="card flex-row flex-wrap mt-3" >
             <div className="card-header border-0">
                 <Image className="photo" src={findCoach(details.rest.coach)} alt="" roundedCircle />
             </div>

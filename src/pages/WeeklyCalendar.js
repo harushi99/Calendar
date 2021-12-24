@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from "react";
 import WeeklyCalendarRenderer from "../helpers/WeeklyCalendarRenderer";
 import WeeklyEvents from "../components/WeeklyEvents";
-import { format, endOfWeek} from 'date-fns';
+import { format, endOfWeek } from 'date-fns';
 import "./WeeklyCalendar.css";
 
 export default function WeeklyCalendar() {

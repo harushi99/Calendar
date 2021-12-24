@@ -50,7 +50,7 @@ const WeeklyEvents = (props) => {
                                     <Accordion.Header>{event.key}</Accordion.Header>
                                     <Accordion.Body>
                                         {event.data.map(details => {
-                                            return (<EventDetails details={details} coachs={coachs} establishments={establishments} activities={activities} />)
+                                            return (<EventDetails key={details.rest.id} details={details} coachs={coachs} establishments={establishments} activities={activities} />)
                                         })}
                                     </Accordion.Body>
                                 </Accordion.Item>
