@@ -48,7 +48,6 @@ export default function WeeklyCalendar() {
 
                 const events = Object.values(object);
                 setEvents(events);
-                //console.log(events);
             }
         )()
 

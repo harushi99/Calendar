@@ -28,9 +28,7 @@ const WeeklyCalendarRenderer = ({ showDetailsHandle }) => {
     };
 
     const changeWeekHandle = (btnType) => {
-        //console.log("current week", currentWeek);
         if (btnType === "prev") {
-            //console.log(subWeeks(currentMonth, 1));
             setCurrentMonth(subWeeks(currentMonth, 1));
             setCurrentWeek(getWeek(subWeeks(currentMonth, 1)));
             onDateClickHandle(startOfWeek(subWeeks(currentMonth, 1), { weekStartsOn: 1 }), lastDayOfWeek(subWeeks(currentMonth, 1), { weekStartsOn: 1 }));
@@ -49,7 +47,6 @@ const WeeklyCalendarRenderer = ({ showDetailsHandle }) => {
 
     const renderHeader = () => {
         const dateFormat = "MMM yyyy";
-        // console.log("selected day", selectedDate);
         return (
             <div className="header rowGrid flex-middle">
                 <div className="colGrid col-start">

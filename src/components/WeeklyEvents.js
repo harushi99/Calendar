@@ -14,7 +14,6 @@ const WeeklyEvents = (props) => {
             coachIds = new Set([...coachIds, ...event.data.map(details => details.rest.coach)]);
             establishmentIds = new Set([...establishmentIds, ...event.data.map(details => details.rest.establishment)]);
             activityIds = new Set([...activityIds, ...event.data.map(details => details.rest.meta_activity)]);
-            console.log("ddd", event);
         })
         async function getCoach() {
             const response = await fetch(`${process.env.REACT_APP_BASE_URL}associated_coach/?company=${process.env.REACT_APP_COMPANY}&id__in=${Array.from(coachIds).join(',')}`);
